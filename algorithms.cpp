@@ -19,7 +19,7 @@ void FCFS(vector<Job> &jobs) {
         }
 
         // Calculate waiting time and turnaround time
-        int waitingTime = time - job.arrivalTime; // Corrected waiting time calculation
+        int waitingTime = time - job.arrivalTime; 
         int turnaroundTime = waitingTime + job.burstTime;
 
         // Output job details
@@ -49,7 +49,7 @@ void SJN(vector<Job> &jobs) {
 
     int currentTime = 0;
     size_t completedJobs = 0;
-    size_t index = 0; // Index to track the next job to be pushed into the heap
+    size_t index = 0;
 
     cout << "SJN Scheduling Order:\n";
 
@@ -77,7 +77,6 @@ void SJN(vector<Job> &jobs) {
     }
 }
 
-// Non-Preemptive Priority Scheduling
 void PriorityScheduling(vector<Job> &jobs) {
     // Sort jobs by arrival time
     sort(jobs.begin(), jobs.end(), [](const Job &a, const Job &b) {
@@ -174,6 +173,7 @@ void RoundRobin(vector<Job> &jobs, int quantum) {
 
 
 void scheduleJobs(vector<Job> &jobs) {
+    // Display available scheduling algorithms
     int choice;
     cout << "Select a scheduling algorithm:\n";
     cout << "1. First-Come, First-Served (FCFS)\n";
@@ -182,7 +182,7 @@ void scheduleJobs(vector<Job> &jobs) {
     cout << "4. Round Robin\n";
     cout << "Enter your choice: ";
     cin >> choice;
-
+    // Call the selected scheduling algorithm
     if (choice == 1){
         FCFS(jobs);
     }

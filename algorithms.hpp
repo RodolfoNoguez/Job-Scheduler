@@ -6,13 +6,14 @@
 #include <queue>
 using namespace std;
 
+// Job structure to hold job details
 struct Job {
     int id;
     int arrivalTime;
     int burstTime;
     int priority;
 };
-
+// Function prototypes for scheduling algorithms
 void FCFS(vector<Job> &jobs);
 void SJN(vector<Job> &jobs);
 void PriorityScheduling(vector<Job> &jobs);
