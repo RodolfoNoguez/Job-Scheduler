@@ -5,7 +5,7 @@ using namespace std;
 
 
 int main(){
-    // Example job list
+    // A placeholder vector witha list of jobs for execution 
     vector<Job> jobs = {
         {1, 0, 5, 3},
         {2, 2, 3, 1},
@@ -13,7 +13,7 @@ int main(){
         {4, 5, 6, 2},
         {5, 6, 4, 5}
     };
-    // Schedule jobs 
+    // this will call the scheduleJobs function to start the scheduling process 
     scheduleJobs(jobs);
     return 0;
 }
