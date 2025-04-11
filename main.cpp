@@ -17,3 +17,5 @@ int main(){
     scheduleJobs(jobs);
     return 0;
 }
+
+//please read read the readme.md file for instructions on how to run the code 
